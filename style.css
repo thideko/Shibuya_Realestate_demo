@@ -1,0 +1,360 @@
+@charset "UTF-8";
+/*--------------------------------------------------*/
+/*デザインタイム*/
+/*--------------------------------------------------*/
+p{
+}
+
+a{
+}
+
+
+
+/*--------------------------------------------------*/
+/*reset.css*/
+/*--------------------------------------------------*/
+/*代表的なブロック要素の隙間を無くす*/
+body,h1,h2,h3,h4,h5,h6,p{
+	margin:0;
+	padding:0;
+}
+
+
+/*段落は下に1文字分隙間があったほうが読みやすい*/
+p{
+	margin-bottom:1em;
+}
+
+
+/*画像の下隙間対策*/
+img{
+	vertical-align:bottom;
+}
+/*IEで画像リンクにboaderが入ってしまう問題*/
+a img{
+	border:none;
+}
+
+
+/*主要大枠の世界を閉じる*/
+#header,
+#contents,
+#footer{
+	/*float対策*/
+	clear:both;
+	/*absolute対策*/
+	position:relative;
+}
+
+
+
+/*--------------------------------------------------*/
+/*リンク*/
+/*--------------------------------------------------*/
+
+/*
+a:hover{
+	opacity:0.5;
+}
+img:hover{
+	opacity:0.5;
+}
+a img:hover{
+	opacity:0.5;
+}
+*/
+
+/*未訪問*/
+a:link {
+	color:#3482b7;
+	text-decoration:underline;
+}
+/*既訪問*/
+ a:visited {
+	color:#666;
+	text-decoration:underline;
+}
+/*マウスオーバー、クリック中*/
+a:hover,
+a:active {
+	text-decoration:none;
+}
+
+
+
+/*未訪問*/
+#footer a:link {
+	color:#333;
+	text-decoration:none;
+}
+/*既訪問*/
+#footer a:visited {
+	color:#666;
+	text-decoration:none;
+}
+
+
+/*マウスオーバー、クリック中*/
+#footer a:hover,
+#footer a:active {
+	text-decoration:underline;
+}
+
+
+
+
+#gNav a:hover,
+#dNavArea .dNavArea_chd:hover{
+	opacity:0.5;
+}
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------*/
+/*layout.css*/
+/*--------------------------------------------------*/
+
+
+body{
+	/*インライン系装飾の一括がけ*/
+	font-size:16px;
+	color:#333;
+	line-height:1.5;/*単位なし*/
+	font-family:sans-serif;/*指定がある場合は入れる*/
+}
+
+
+
+
+
+/*------------------------------*/
+/*wrapper系*/
+/*------------------------------*/
+/*例外　上下の画像を横リピート*/
+#body_inr{
+	background:url(images/footer_bgX.png) repeat-x left bottom;
+}
+#body_inr_inr{
+	background:url(images/header_bgX.png) repeat-x left top;
+}
+
+#wrapper{
+	width:960px;
+	margin:0 auto;
+}
+
+
+
+/*------------------------------*/
+/*header系*/
+/*------------------------------*/
+#header{
+	height:80px;
+}
+#logo_id{
+	position:absolute;
+	left:0;
+	top:29px;
+}
+
+
+/*--------------------*/
+ul#gNav,
+ul#gNav li{
+	margin:0;
+	padding:0;
+}
+ul#gNav{
+	list-style:none;
+	position:absolute;
+	right:0px;
+	top:26px;
+}
+ul#gNav li{
+	float:left;
+}
+ul#gNav li a{
+	display:block;
+	padding:10px 20px;
+}
+/*--------------------*/
+
+
+
+
+/*------------------------------*/
+/*contents系*/
+/*------------------------------*/
+#contents{
+	margin-bottom:40px;
+	
+}
+
+#contents>div{
+	margin-bottom:20px;
+	
+}
+
+
+
+#contents p{
+	margin:0;
+}
+/*--------------------*/
+#dNavArea{
+	height:184px;
+}
+
+/*#dNavArea > div{*/
+#dNavArea .dNavArea_chd{
+	width:296px;
+	border:1px solid #CCC;
+	padding:1px;
+	background-color:#FFF;
+	
+	float:left;
+	margin-right:30px;
+}
+/*--------------------*/
+#clmArea{
+}
+
+#clmArea_main{
+	width:630px;
+	float:right;
+}
+
+.section{
+}
+
+.section h2{
+	margin-bottom:20px;
+	
+}
+
+
+#tblDate{
+	width:100%
+	border:1px solid #000;
+	border-collapse:collapse;
+	line-height:1.4;
+	
+	
+}
+
+
+
+#tblDate th{
+	display:none;
+}
+
+
+#tblDate td.td_left{
+
+/*padding-right:1em;
+*/
+width:7.5em;
+
+}
+
+
+
+
+
+
+#clmArea_sub{
+	width:300px;
+	float:left;
+}
+
+ul#sNav,
+ul#sNav li{
+	margin:0;
+	padding:0;
+}
+ul#sNav{
+	list-style:none;
+	border:5px solid #65b2e6;
+	border-bottom:none;
+}
+ul#sNav li{
+	border-bottom:5px solid #65b2e6;
+}
+
+
+
+
+/*------------------------------*/
+/*footer系*/
+/*------------------------------*/
+#footer{
+	font-size:12px;
+}
+
+/*--------------------*/
+#footer_top{
+	height:35px;
+}
+
+
+ul#fNav,
+ul#fNav li{
+	margin:0;
+	padding:0;
+}
+ul#fNav{
+	list-style:none;
+}
+ul#fNav li{
+	float:left;
+	margin-right:16px;
+		height:35px;
+		line-height:35px;
+}
+ul#fNav li a{
+	padding-left:9px;
+	background:url(images/arrow.png) no-repeat left center;
+}
+
+
+
+/*--------------------*/
+#footer_btm{
+}
+#footer_btm p{
+	margin:0;/*reset.css相当の中で下1em使っているため*/
+	text-align:center;
+		height:35px;
+		line-height:35px;
+	color:#FFF;
+}
+
+
+
+/*--------------------------------------------------*/
+/*追加系*/
+/*--------------------------------------------------*/
+#wrapper .add_pr0{
+	padding-right:0;
+}
+#wrapper .add_mr0{
+	margin-right:0;
+}
+
+/*
+場合によっては、以下で統一できる可能性もある
+#wrapper .add_mpr0{
+	padding-right:0;
+	margin-right:0;
+}
+*/
+
+
+
+/*--------------------------------------------------*/
